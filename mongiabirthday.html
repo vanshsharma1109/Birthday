@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Aanya!</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: linear-gradient(to right, #ffe0ec, #ffe5b4);
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #d6336c;
+      margin-bottom: 10px;
+    }
+    .page {
+      display: none;
+    }
+    .active {
+      display: block;
+      animation: fadeIn 1s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .nav-btn {
+      margin-top: 20px;
+      background: #ff7f50;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px 0;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+    .poem, .final-message {
+      font-size: 18px;
+      color: #5e2a2a;
+      margin: 10px 0 30px;
+      line-height: 1.6;
+      padding: 0 10px;
+    }
+    .final-message {
+      font-weight: 500;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 24px;
+      }
+      .nav-btn {
+        width: 80%;
+      }
+      .poem, .final-message {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page active" id="page1">
+    <h1>Happy Birthday Aanya 🎉</h1>
+    <p class="poem">
+      On this day so bright and sweet,<br>
+      May joy and love your spirit greet.<br>
+      With every smile and every cheer,<br>
+      Aanya, your magic fills the year. 💖
+    </p>
+    <button class="nav-btn" onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <div class="page" id="page2">
+    <img src="mongia.PNG" alt="Aanya 1"/>
+    <p class="poem">
+      In white you shine like morning dew,<br>
+      A gentle light, so kind and true.<br>
+      Grace in steps, and charm so rare,<br>
+      You turn the world with just one stare. ✨
+    </p>
+    <button class="nav-btn" onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <div class="page" id="page3">
+    <img src="mongia1.PNG" alt="Aanya 2"/>
+    <p class="poem">
+      In yellow glow and dreamy gleam,<br>
+      You're the light inside a dream.<br>
+      A thousand stars envy your smile,<br>
+      That makes each heartbeat stay awhile. 🌟
+    </p>
+    <button class="nav-btn" onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <div class="page" id="page4">
+    <img src="mongia3.PNG" alt="Aanya 3"/>
+    <p class="poem">
+      Dressed in white with flowers near,<br>
+      You spread a vibe so bright and clear.<br>
+      In every dress, in every pose,<br>
+      You're a poem the world knows. 🌸
+    </p>
+    <button class="nav-btn" onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <div class="page" id="page5">
+    <img src="mongia4.PNG" alt="Aanya 4"/>
+    <p class="poem">
+      High above the city view,<br>
+      You stand with dreams and skies so blue.<br>
+      A queen of heights, both fierce and kind,<br>
+      Aanya, you're a rare find. 👑
+    </p>
+    <button class="nav-btn" onclick="nextPage()">Next ➡️</button>
+  </div>
+
+  <div class="page" id="page6">
+    <h1>With All My Heart 💌</h1>
+    <p class="final-message">
+      Aanya, you're not just someone who brightens a day —<br>
+      you're the kind of person who lights up lives.<br><br>
+      Your kindness, your strength, your laughter — all of it<br>
+      inspires me more than you’ll ever know. Watching you<br>
+      grow, smile, and chase your dreams is a gift I treasure.<br><br>
+      On your birthday, I just want you to know: you are cherished,<br>
+      you are admired, and above all — you are deeply loved.<br><br>
+      Happy Birthday once again. May the world always be as kind<br>
+      to you as you are to it. 💖
+    </p>
+    <button class="nav-btn" onclick="restart()">💖 Back to Start</button>
+  </div>
+
+  <script>
+    let currentPage = 1;
+    function nextPage() {
+      document.getElementById(`page${currentPage}`).classList.remove("active");
+      currentPage++;
+      document.getElementById(`page${currentPage}`).classList.add("active");
+    }
+    function restart() {
+      document.getElementById(`page${currentPage}`).classList.remove("active");
+      currentPage = 1;
+      document.getElementById(`page${currentPage}`).classList.add("active");
+    }
+  </script>
+</body>
+</html>
